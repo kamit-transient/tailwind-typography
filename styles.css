@@ -1,0 +1,131 @@
+
+/* default typography styles */
+/* Styles inherited from https://milligram.io/#getting-started */
+img {
+  @apply w-full h-auto;
+}
+
+h1 {
+  font-size: 4.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-800;
+}
+
+table,
+ul,
+ol,
+dl,
+p {
+  @apply text-gray-700 tracking-widest leading-relaxed text-base mt-6;
+}
+
+em {
+  @apply italic bg-secondary-50;
+}
+
+/* small , strong, underlined has default tailwind styles which good */
+blockquote,
+q {
+  @apply my-8 ml-10 pl-10 pb-10 pt-5 pr-5 rounded-lg bg-secondary-50 border-l-8 border-secondary-base text-secondary-600 tracking-tight;
+}
+
+q p,
+q span,
+q div,
+q small,
+q b,
+q i,
+q footer,
+q cite,
+blockquote p,
+blockquote span,
+blockquote div,
+blockquote small,
+blockquote b,
+blockquote i,
+blockquote footer,
+blockquote cite {
+  @apply text-gray-600 tracking-wide;
+}
+
+blockquote footer,
+blockquote cite,
+blockquote cite p,
+blockquote cite div,
+blockquote cite small,
+blockquote cite b,
+blockquote cite i {
+  @apply text-gray-500 italic;
+}
+
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+dl dt {
+  @apply bg-gray-100;
+
+}
+
+dl dt {
+  @apply pl-5
+}
+
+
+tr{
+  @apply relative;
+}
+tr td{
+  @apply text-gray-800 px-6 text-left p-3;
+  
+}
+
+thead tr{
+  @apply bg-gray-300;
+}
+thead tr th{
+  @apply font-bold text-left p-4 text-secondary-600;
+}
+tr::before {
+  content: '';
+  height: 5px;
+  width: 100%;
+  @apply flex absolute inset-x-0 bottom-0 p-10 border-b-4 border-gray-300
+}
+
+
+hr{
+  @apply my-3;
+}
