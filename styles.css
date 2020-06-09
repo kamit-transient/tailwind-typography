@@ -1,32 +1,92 @@
 
-/* default typography styles */
-/* Styles inherited from https://milligram.io/#getting-started */
-img {
-  @apply w-full h-auto;
+@tailwind base;
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/poppins/Poppins-Regular.ttf");
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url("/fonts/NotoSans/NotoSans-Regular.ttf");
+  font-weight: 400;
+}
+
+
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+
+
+
+/* default typography styles */
+/* Styles inherited from https://milligram.io/#getting-started */
+
+img {
+  @apply w-full h-auto m-auto;
+}
+
+
+table,
+ul,
+ol,
+dl,
+p,
+small,
+strong,
+u,
+span,
+em {
+  @apply text-gray-700 tracking-wide leading-relaxed text-lg mt-6;
+}
+
+small,
+strong,
+u,
+em,
+table {
+  @apply text-base;
+}
+
+em {
+  @apply italic bg-secondary-50;
+}
+
+
 h1 {
-  font-size: 4.6rem;
+  @apply text-4xl;
+
 }
 
 h2 {
-  font-size: 3.6rem;
+  @apply text-3xl;
 }
 
 h3 {
-  font-size: 2.8rem;
+  @apply text-2xl;
 }
 
 h4 {
-  font-size: 2.2rem;
+  @apply text-xl;
 }
 
 h5 {
-  font-size: 1.8rem;
+  @apply text-lg;
 }
 
 h6 {
-  font-size: 1.6rem;
+  @apply text-lg;
 }
 
 h1,
@@ -35,25 +95,14 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-gray-800;
+  @apply text-gray-800 leading-tight font-bold mt-6;
 }
 
-table,
-ul,
-ol,
-dl,
-p {
-  @apply text-gray-700 tracking-widest leading-relaxed text-base mt-6;
-}
-
-em {
-  @apply italic bg-secondary-50;
-}
 
 /* small , strong, underlined has default tailwind styles which good */
 blockquote,
 q {
-  @apply my-8 ml-10 pl-10 pb-10 pt-5 pr-5 rounded-lg bg-secondary-50 border-l-8 border-secondary-base text-secondary-600 tracking-tight;
+  @apply my-5 ml-5 pl-4 pb-10 pt-5 pr-5 rounded-lg bg-gray-100 border-l-4 border-secondary-base text-secondary-600 tracking-tight;
 }
 
 q p,
@@ -86,6 +135,12 @@ blockquote cite i {
 }
 
 
+ul,
+ol,
+dl {
+  @apply px-5;
+}
+
 ul {
   @apply list-disc;
 }
@@ -104,20 +159,27 @@ dl dt {
 }
 
 
-tr{
+tr {
   @apply relative;
 }
-tr td{
+
+tr td {
   @apply text-gray-800 px-6 text-left p-3;
-  
+
 }
 
-thead tr{
+
+table{
+  @apply m-auto;
+}
+thead tr {
   @apply bg-gray-300;
 }
-thead tr th{
+
+thead tr th {
   @apply font-bold text-left p-4 text-secondary-600;
 }
+
 tr::before {
   content: '';
   height: 5px;
@@ -126,6 +188,90 @@ tr::before {
 }
 
 
-hr{
+hr {
   @apply my-3;
 }
+
+
+a {
+  @apply text-secondary-base;
+}
+
+a:hover {
+  @apply text-secondary-800;
+}
+
+a:active {
+  @apply text-secondary-800;
+}
+
+@screen sm {
+
+
+  h1 {
+    @apply text-6xl;
+
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  table,
+  ul,
+  ol,
+  dl,
+  p {
+    @apply tracking-widest text-xl;
+  }
+
+  table{
+    @apply m-auto;
+  }
+
+small,
+strong,
+u,
+em,
+table {
+  @apply text-lg;
+}
+
+
+  /* small , strong, underlined has default tailwind styles which good */
+  blockquote,
+  q {
+    @apply my-8 ml-10 pl-10 pb-10 pt-5 pr-5 rounded-lg bg-gray-100 border-l-8 border-secondary-base text-secondary-600 tracking-tight;
+  }
+
+
+  dl dt {
+    @apply pl-5
+  }
+
+}
+
+/* SM ENDS */
+
+
+
+
+
+
+/* TYPOGRAPHY STYLES ENDS */
