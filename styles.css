@@ -46,7 +46,6 @@ p,
 small,
 strong,
 u,
-span,
 em {
   @apply text-gray-700 tracking-wide leading-relaxed text-lg mt-6;
 }
